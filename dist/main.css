@@ -1,0 +1,181 @@
+/*!******************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/css/Navigation.scss ***!
+  \******************************************************************************************************************/
+.home {
+  display: block;
+  width: 100%;
+  height: 100vh;
+}
+.home .icon {
+  display: block;
+  width: 1000px;
+  height: 100px;
+  margin: 20px auto;
+}
+.home .nav-bar {
+  display: inline-block;
+  width: 100px;
+  padding-left: 20px;
+}
+.home .nav-bar * {
+  border-radius: 20px;
+  display: block;
+  border: 1px solid pink;
+  margin-top: 10px;
+  width: 110px;
+  height: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.show-content {
+  display: inline-block;
+  position: absolute;
+  width: calc(100% - 100px);
+  height: calc(100% - 100px);
+}
+/*!****************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/css/AddPlace.scss ***!
+  \****************************************************************************************************************/
+.hidden {
+  display: none;
+}
+
+.set-block > * {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+.set-block > label {
+  margin-right: 10px;
+}
+.set-block > input {
+  width: 200px;
+  height: 20px;
+  border: none;
+  border-bottom: 1px solid pink;
+}
+
+.add-place-box > h2 {
+  margin-bottom: 50px;
+}
+.add-place-box > * {
+  margin-left: 100px;
+}
+.add-place-box > button {
+  margin: 30px 0 0 200px;
+  width: 60px;
+  height: 50px;
+  border-radius: 50px;
+  border: 1px solid pink;
+  cursor: pointer;
+}
+/*!******************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/css/ScrapPlace.scss ***!
+  \******************************************************************************************************************/
+.go-list {
+  margin: 100px 0 0 300px;
+  width: 100px;
+  height: 40px;
+  border-radius: 50px;
+  border: 1px solid pink;
+  cursor: pointer;
+}
+
+.scrap-list-box {
+  margin: 20px 0 0 70px;
+}
+.scrap-list-box .star-text {
+  display: inline-block;
+  font-size: 30px;
+  color: yellow;
+  margin-left: 10px;
+}
+.scrap-list-box .scrap-text {
+  display: inline-block;
+  margin-left: 10px;
+}
+.scrap-list-box .content {
+  display: inline-block;
+  color: #A0D1F7;
+  margin-left: 20px;
+  font-size: small;
+}
+.scrap-list-box .place-list-box {
+  margin: 20px 0 0 20px;
+}
+.scrap-list-box .place-list {
+  margin: 0 30px 20px 0;
+  display: inline-block;
+  width: 200px;
+  min-height: 150px;
+  height: auto;
+  border: 1px solid pink;
+  border-radius: 5px;
+  background-color: #FFF0F5;
+  cursor: pointer;
+}
+.scrap-list-box .place-list > :first-child {
+  height: 100px;
+}
+.scrap-list-box .place-list .x-box {
+  position: relative;
+  display: inline-block;
+  left: 170px;
+  top: -105px;
+  width: 20px;
+  text-align: center;
+  border-radius: 50px;
+  border: 1px solid pink;
+  cursor: pointer;
+}
+.scrap-list-box .place-list .x-box:hover {
+  background-color: #FFACB7;
+}
+.scrap-list-box .place-list .place-name {
+  text-align: center;
+  line-height: 100px;
+  font-weight: bold;
+}
+.scrap-list-box .place-list .place-address {
+  text-align: center;
+}
+
+#road-view {
+  width: 300px;
+  height: 300px;
+}
+/*!**************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/css/Detail.scss ***!
+  \**************************************************************************************************************/
+.detail-box {
+  margin: 50px 0 0 100px;
+}
+
+#map {
+  width: 350px;
+  height: 350px;
+  display: inline-block;
+  margin-left: 100px;
+}
+
+.show-map {
+  width: 300px;
+  height: 300px;
+}
+
+.info-box {
+  display: inline-block;
+}
+.info-box > * {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.info-box > span {
+  margin-left: 10px;
+}
+
+.content {
+  display: inline-block;
+  color: #A0D1F7;
+  font-size: small;
+}

@@ -1,7 +1,12 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require('webpack');
 const path = require("path");
+// const fibers = require("fibers");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const Dotenv = require('dotenv-webpack')
+const dotenv = require('dotenv')
 
+dotenv.config();
 module.exports = (env, argv) => {
   const prod = argv.mode === "production";
   
@@ -14,7 +19,12 @@ module.exports = (env, argv) => {
     filename: "bundle.js",
   },
   resolve: {
-    extensions: [".js", ".jsx", ".ts", ".tsx"],
+    extensions: [".js", ".jsx", ".ts", ".tsx", ".css", ".scss"],
+    fallback: {
+      "fs": false,
+      "path": false ,
+      "os": false
+  }
   },
   module: {
     rules: [
@@ -23,6 +33,19 @@ module.exports = (env, argv) => {
         use: ["babel-loader", "ts-loader"],
         exclude: /node_modules/,
       },
+      {
+        test: /\.(scss|css)$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader','sass-loader'],
+          exclude: /node_modules/,
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: [{
+            loader: 'file-loader'
+        }]
+    }
     ],
   },
   devServer: {
@@ -33,6 +56,8 @@ module.exports = (env, argv) => {
   plugins: [
     new webpack.ProvidePlugin({
       React: "react",
+      process: 'process/browser',
+      'process.env.NODE_ENV': JSON.stringify('development')
     }),
     new HtmlWebpackPlugin({
       template: "./public/index.html",
@@ -48,6 +73,13 @@ module.exports = (env, argv) => {
           : false,
     }),
     new webpack.HotModuleReplacementPlugin(),
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+    }),
+    new Dotenv(),
+    new webpack.DefinePlugin({
+      'process.env': JSON.stringify(process.env)
+   })
   ],
   }
 };

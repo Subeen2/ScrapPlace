@@ -21,6 +21,8 @@
     "isolatedModules": true,
   },
   "include": [
-    "src"
+    "src",
+    "./declaration.d.ts"
   ]
+
 }

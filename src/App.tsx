@@ -1,5 +1,6 @@
 import React from 'react';
+import Navigation from './components/Navigation';
 
 export default function App() {
-  return <div>React + TypeScript + Webpack!</div>;
+  return <Navigation />;
 }

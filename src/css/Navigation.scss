@@ -1,0 +1,36 @@
+.home {
+  display: block;
+  width: 100%;
+  height: 100vh;
+
+  .icon {
+    display: block;
+    width: 1000px;
+    height: 100px;
+    margin: 20px auto;
+  }
+
+  .nav-bar {
+    display: inline-block;
+    width: 100px;
+    padding-left: 20px;
+
+    * {
+      border-radius: 20px;
+      display: block;
+      border: 1px solid pink;
+      margin-top: 10px;
+      width: 110px;
+      height: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
+}
+
+.show-content {
+  display: inline-block;
+  position: absolute;
+  width: calc(100% - 100px);
+  height: calc(100% - 100px);
+}

@@ -1,19 +1,18 @@
-Html Webpack Plugin:
-<pre>
-  ReferenceError: env is not defined
-  
-  - loader.js:4 eval
-    [index.html?.]/[html-webpack-plugin]/lib/loader.js:4:11
-  
-  - loader.js:7 module.exports
-    [index.html?.]/[html-webpack-plugin]/lib/loader.js:7:3
-  
-  - index.js:450 
-    [ScrapPlace]/[html-webpack-plugin]/index.js:450:16
-  
-  - task_queues:96 processTicksAndRejections
-    node:internal/process/task_queues:96:5
-  
-  - async Promise.all
-  
-</pre>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/css/home.scss" type="text/css" />
+    <title>Scrap Place</title>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=%REACT_APP_KAKAOMAP_API_KEY%&libraries=services,clusterer,drawing&autoload=false"></script>
+    <script type="text/javascript">
+      kakao.maps.load(function() {
+        const map = new kakao.maps.Map(node, options);
+      });
+    </script>
+  <script defer src="bundle.js"></script><link href="main.css" rel="stylesheet"></head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

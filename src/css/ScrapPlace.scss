@@ -1,0 +1,84 @@
+.go-list {
+  margin: 100px 0 0 300px;
+  width: 100px;
+  height: 40px;
+  border-radius: 50px;
+  border: 1px solid pink;
+  cursor: pointer;
+}
+
+.scrap-list-box {
+  margin: 20px 0 0 70px;
+
+  .star-text {
+    display: inline-block;
+    font-size: 30px;
+    color: yellow;
+    margin-left: 10px;
+  }
+
+  .scrap-text {
+    display: inline-block;
+    margin-left: 10px;
+  }
+
+  .content {
+    display: inline-block;
+    color: #A0D1F7;
+    margin-left: 20px;
+    font-size: small;
+  }
+
+  .place-list-box {
+    margin: 20px 0 0 20px;
+  }
+
+
+  .place-list {
+    margin: 0 30px 20px 0;
+    display: inline-block;
+    width: 200px;
+    min-height: 150px;
+    height: auto;
+    border: 1px solid pink;
+    border-radius: 5px;
+    background-color: #FFF0F5;
+    cursor: pointer;
+
+    > :first-child {
+      height: 100px;
+    }
+
+    .x-box {
+      position: relative;
+      display: inline-block;
+      left: 170px;
+      top: -105px;
+      width: 20px;
+      text-align: center;
+      border-radius: 50px;
+      border: 1px solid pink;
+      cursor: pointer;
+    }
+
+    .x-box:hover {
+      background-color: #FFACB7;
+    }
+
+    .place-name {
+      text-align: center;
+      line-height: 100px;
+      font-weight: bold;
+    }
+
+    .place-address {
+      text-align: center;
+    }
+  }
+}
+
+
+#road-view {
+  width: 300px;
+  height: 300px;
+}

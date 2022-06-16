@@ -5,16 +5,21 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --mode=development --open --hot --progress",
-    "build": "webpack --mode=production  --progress",
-    "start": "webpack --mode=development  --progress"
+    "build": "webpack --mode=production  --progress -w",
+    "start": "webpack --mode=development  --progress",
+    "node-sass": "node-sass"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "-": "^0.0.1",
+    "dotenv": "^16.0.1",
+    "dotenv-webpack": "^7.1.0",
+    "node-sass": "^7.0.1",
     "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react-dom": "^18.1.0",
+    "react-router-dom": "^6.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.18.2",
@@ -24,10 +29,17 @@
     "@types/react": "^18.0.10",
     "@types/react-dom": "^18.0.5",
     "babel-loader": "^8.2.5",
+    "css-loader": "^6.7.1",
+    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "sass": "^1.52.2",
+    "sass-loader": "^13.0.0",
+    "style-loader": "^3.3.1",
     "ts-loader": "^9.3.0",
     "typescript": "^4.7.2",
-    "webpack": "^5.72.1",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.73.0",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.9.1"
   }

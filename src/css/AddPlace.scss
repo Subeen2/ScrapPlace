@@ -1,0 +1,40 @@
+.hidden {
+  display: none;
+}
+
+.set-block {
+  >* {
+    display: inline-block;
+    margin-bottom: 15px;
+  }
+
+  >label {
+    margin-right: 10px;
+  }
+
+  >input {
+    width: 200px;
+    height: 20px;
+    border: none;
+    border-bottom: 1px solid pink;
+  }
+}
+
+.add-place-box {
+  >h2 {
+    margin-bottom: 50px;
+  }
+
+  >* {
+    margin-left: 100px;
+  }
+
+  >button {
+    margin: 30px 0 0 200px;
+    width: 60px;
+    height: 50px;
+    border-radius: 50px;
+    border: 1px solid pink;
+    cursor: pointer;
+  }
+}
