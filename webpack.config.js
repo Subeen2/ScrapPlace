@@ -56,8 +56,6 @@ module.exports = (env, argv) => {
   plugins: [
     new webpack.ProvidePlugin({
       React: "react",
-      process: 'process/browser',
-      'process.env.NODE_ENV': JSON.stringify('development')
     }),
     new HtmlWebpackPlugin({
       template: "./public/index.html",
@@ -76,10 +74,7 @@ module.exports = (env, argv) => {
     new MiniCssExtractPlugin({
       filename: '[name].css',
     }),
-    new Dotenv(),
-    new webpack.DefinePlugin({
-      'process.env': JSON.stringify(process.env)
-   })
+    new Dotenv()
   ],
   }
 };
