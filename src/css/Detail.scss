@@ -1,5 +1,4 @@
 .detail-box {
-  margin: 50px 0 0 100px;
 }
 
 #map {
@@ -17,18 +16,18 @@
 .info-box {
   display: inline-block;
 
-  >* {
+  > * {
     display: inline-block;
     margin-bottom: 20px;
   }
 
-  >span {
+  > span {
     margin-left: 10px;
   }
 }
 
 .content {
   display: inline-block;
-  color: #A0D1F7;
+  color: #a0d1f7;
   font-size: small;
 }

@@ -8,8 +8,6 @@
 }
 
 .scrap-list-box {
-  margin: 20px 0 0 70px;
-
   .star-text {
     display: inline-block;
     font-size: 30px;
@@ -19,64 +17,106 @@
 
   .scrap-text {
     display: inline-block;
-    margin-left: 10px;
+    margin: 0 0 50px 10px;
   }
 
   .content {
-    display: inline-block;
-    color: #A0D1F7;
-    margin-left: 20px;
-    font-size: small;
+    // display: none;
+    position: absolute;
+    width: 400px;
+    height: 40px;
+    left: 300px;
+    background: aliceblue;
+    color: grey;
+    border-radius: 5px;
+    padding: 12px 12.8px;
+    text-align: center;
+  }
+
+  .content:after {
+    border-top: 15px solid aliceblue;
+    border-left: 15px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 0px solid transparent;
+    content: "";
+    position: absolute;
+    // top: -20px;
+    left: -10px;
   }
 
   .place-list-box {
     margin: 20px 0 0 20px;
   }
 
-
   .place-list {
-    margin: 0 30px 20px 0;
     display: inline-block;
     width: 200px;
-    min-height: 150px;
-    height: auto;
-    border: 1px solid pink;
-    border-radius: 5px;
-    background-color: #FFF0F5;
-    cursor: pointer;
-
-    > :first-child {
-      height: 100px;
-    }
+    height: 185px;
+    background-color: #fff0f5;
+    position: relative;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 15px;
+    font-family: "paybooc-Light", sans-serif;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s;
+    margin: 0 40px 50px 0;
 
     .x-box {
       position: relative;
       display: inline-block;
-      left: 170px;
-      top: -105px;
+      left: 130px;
+      top: -135px;
       width: 20px;
       text-align: center;
       border-radius: 50px;
-      border: 1px solid pink;
+      border: none;
       cursor: pointer;
+      color: #ffffff;
+    }
+
+    .x-box::after {
+      display: inline-block;
+      content: "\00d7";
+      font-size: 20pt;
     }
 
     .x-box:hover {
-      background-color: #FFACB7;
+      color: rgb(170, 169, 169);
     }
 
     .place-name {
       text-align: center;
-      line-height: 100px;
+      line-height: 80px;
       font-weight: bold;
     }
 
     .place-address {
       text-align: center;
+      line-height: 20px;
+      font-weight: 500;
+      font-size: 0.9em;
+      height: 60px;
     }
   }
-}
 
+  .last {
+    color: gray;
+    background-color: white;
+  }
+
+  .place-list:hover {
+    letter-spacing: 1px;
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+
+  // .place-list:active {
+  //   transform: scale(1.5);
+  // }
+}
 
 #road-view {
   width: 300px;

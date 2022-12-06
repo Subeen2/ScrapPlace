@@ -3,16 +3,16 @@
 }
 
 .set-block {
-  >* {
+  > * {
     display: inline-block;
     margin-bottom: 15px;
   }
 
-  >label {
+  > label {
     margin-right: 10px;
   }
 
-  >input {
+  > input {
     width: 200px;
     height: 20px;
     border: none;
@@ -21,15 +21,15 @@
 }
 
 .add-place-box {
-  >h2 {
+  > h2 {
     margin-bottom: 50px;
   }
 
-  >* {
+  > * {
     margin-left: 100px;
   }
 
-  >button {
+  > button {
     margin: 30px 0 0 200px;
     width: 60px;
     height: 50px;

@@ -1,6 +1,23 @@
-import React from 'react';
-import Navigation from './components/Navigation';
+import React from "react";
+import Home from "./components/Home";
+import "./css/global.scss";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import AddPlace from "./components/AddPlace";
 
 export default function App() {
-  return <Navigation />;
+  return (
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          {/* <Route
+            path="/add-place"
+            element={
+              <AddPlace />
+            }
+          /> */}
+        </Routes>
+      </BrowserRouter>
+    </>
+  );
 }
