@@ -2,39 +2,75 @@
   display: none;
 }
 
-.set-block {
-  > * {
-    display: inline-block;
-    margin-bottom: 15px;
-  }
-
-  > label {
-    margin-right: 10px;
-  }
-
-  > input {
-    width: 200px;
-    height: 20px;
-    border: none;
-    border-bottom: 1px solid pink;
-  }
+h2 {
+  width: 800px;
+  margin: 0 auto 100px auto;
 }
 
 .add-place-box {
-  > h2 {
-    margin-bottom: 50px;
+  margin: auto;
+  width: 800px;
+  display: flex;
+
+  .set-block {
+    > * {
+      display: inline-block;
+      margin-bottom: 35px;
+    }
+
+    > label {
+      margin-right: 10px;
+      font-weight: 600;
+    }
+
+    > input {
+      width: 200px;
+      height: 20px;
+      border: none;
+      border-bottom: 1px solid pink;
+    }
   }
 
-  > * {
+  .content {
+    position: absolute;
+    width: 400px;
+    height: 40px;
+    left: 300px;
+    background: aliceblue;
+    color: grey;
+    border-radius: 5px;
+    padding: 12px 12.8px;
+    text-align: center;
     margin-left: 100px;
   }
 
-  > button {
-    margin: 30px 0 0 200px;
-    width: 60px;
+  .content:after {
+    border-top: 15px solid aliceblue;
+    border-left: 15px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 0px solid transparent;
+    content: "";
+    position: absolute;
+    left: -10px;
+  }
+
+  .add-button {
+    width: 80px;
     height: 50px;
-    border-radius: 50px;
-    border: 1px solid pink;
+    background-color: #ffdfe9;
+    position: relative;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.25s;
+    margin: 350px 40px 50px 0;
+    font-weight: 600;
+  }
+
+  .add-button:hover {
+    letter-spacing: 1px;
+    transform: scale(1.1);
     cursor: pointer;
   }
 }

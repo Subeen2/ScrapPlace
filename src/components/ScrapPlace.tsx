@@ -1,6 +1,5 @@
 /*global kakao */
 import React, { ReactElement, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import "../css/ScrapPlace.scss";
 import { Place } from "../type";
 import Detail from "./Detail";
@@ -9,37 +8,38 @@ interface Props {
   isShow: boolean;
   placeArr: Place[] | [];
   deletePlace: any;
+  setIsShow: (e: boolean) => void;
 }
 
-const ScrapPlace = (props: Props): ReactElement => {
-  const kakao = (window as any).kakao;
+function ScrapPlace({ isShow, placeArr, deletePlace, setIsShow }: Props): ReactElement {
   const [isPlaceClicked, setIsPlaceClicked] = useState<boolean>(false);
   const [className, setClassName] = useState<string>("show");
   const [indexOfItem, setIndexOfItem] = useState<number>(-1);
   const [isAddPlaceClicked, setIsAddPlaceClicked] = useState<boolean>(false);
 
   useEffect(() => {
-    if (props.isShow) {
+    if (isShow) {
       setClassName("show");
     } else {
       setClassName("hidden");
     }
-  }, [props.isShow]);
+  }, [isShow]);
 
   const detailPlace = (e: any) => {
     setIsPlaceClicked(!isPlaceClicked);
-    for (var i: number = 0; i < props.placeArr.length; i++) {
-      if (props.placeArr[i].placename === e.target.innerText) {
+    for (var i: number = 0; i < placeArr.length; i++) {
+      if (placeArr[i].placename === e.target.innerText) {
+        console.log(i);
         setIndexOfItem(i);
       }
     }
   };
 
   const addPlace = () => {
-    setIsAddPlaceClicked(!isAddPlaceClicked);
+    setIsShow(!isShow);
   };
 
-  const placeList: JSX.Element[] = props.placeArr.map((name, index) => (
+  const placeList: JSX.Element[] = placeArr.map((name, index) => (
     <div key={index} className="place-list">
       <div className="place-name" onClick={(e) => detailPlace(e)}>
         {name.placename}
@@ -47,7 +47,7 @@ const ScrapPlace = (props: Props): ReactElement => {
       <div className="place-address" onClick={(e) => detailPlace(e)}>
         {name.address}
       </div>
-      <div className="x-box" onClick={(e) => props.deletePlace(e)}></div>
+      <div className="x-box" onClick={(e) => deletePlace(e)}></div>
     </div>
   ));
 
@@ -55,10 +55,10 @@ const ScrapPlace = (props: Props): ReactElement => {
     <div className={className}>
       {isPlaceClicked ? (
         <div>
-          <Detail place={props.placeArr[indexOfItem]} />
+          <Detail place={placeArr[indexOfItem]} />
           <footer>
             <button onClick={detailPlace} className="go-list">
-              목록으로
+              수정하기
             </button>
           </footer>
         </div>
@@ -75,12 +75,12 @@ const ScrapPlace = (props: Props): ReactElement => {
             </div>
             {/* </Link> */}
           </div>
-
+          {/* <Detail place={props.placeArr[indexOfItem]} /> */}
           <div id="road-view"></div>
         </div>
       )}
     </div>
   );
-};
+}
 
 export default ScrapPlace;

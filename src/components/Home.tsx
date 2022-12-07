@@ -1,5 +1,5 @@
 /*global kakao */
-import React, { ReactElement } from "react";
+import React from "react";
 import { useState, useEffect } from "react";
 import "../css/global.scss";
 import AddPlace from "./AddPlace";
@@ -7,7 +7,7 @@ import ScrapPlace from "./ScrapPlace";
 import Logo from "../logo.png";
 import { Place } from "../type";
 
-const Home = () => {
+function Home() {
   const [isShow, setIsShow] = useState<boolean>(true);
   const placeItems = localStorage.getItem("place");
   const [placeArr, setPlaceArr] = useState<Place[]>([]);
@@ -56,7 +56,12 @@ const Home = () => {
         <button onClick={addPlaceClicked}>장소 추가하기</button>
       </div>
       <main className="main">
-        <ScrapPlace placeArr={placeArr} deletePlace={deletePlace} isShow={isShow} />
+        <ScrapPlace
+          placeArr={placeArr}
+          deletePlace={deletePlace}
+          isShow={isShow}
+          setIsShow={setIsShow}
+        />
         <AddPlace placeArr={placeArr} isShow={isShow} setIsShow={setIsShow} />
       </main>
       <footer className="footer">
@@ -65,6 +70,6 @@ const Home = () => {
       </footer>
     </div>
   );
-};
+}
 
 export default Home;

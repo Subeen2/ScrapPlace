@@ -6,18 +6,19 @@ import AddPlace from "./components/AddPlace";
 
 export default function App() {
   return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          {/* <Route
-            path="/add-place"
-            element={
-              <AddPlace />
-            }
-          /> */}
-        </Routes>
-      </BrowserRouter>
-    </>
+    <Home />
+    // <>
+    //   <BrowserRouter>
+    //     <Routes>
+    //       <Route path="/" element={<Home />} />
+    //       {/* <Route
+    //         path="/add-place"
+    //         element={
+    //           <AddPlace />
+    //         }
+    //       /> */}
+    //     </Routes>
+    //   </BrowserRouter>
+    // </>
   );
 }
