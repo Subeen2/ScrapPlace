@@ -27,7 +27,7 @@ function ScrapPlace({ isShow, placeArr, deletePlace, setIsShow }: Props): ReactE
 
   const detailPlace = (e: any) => {
     setIsPlaceClicked(!isPlaceClicked);
-    for (var i: number = 0; i < placeArr.length; i++) {
+    for (let i: number = 0; i < placeArr.length; i++) {
       if (placeArr[i].placename === e.target.innerText) {
         console.log(i);
         setIndexOfItem(i);
@@ -54,14 +54,7 @@ function ScrapPlace({ isShow, placeArr, deletePlace, setIsShow }: Props): ReactE
   return (
     <div className={className}>
       {isPlaceClicked ? (
-        <div>
-          <Detail place={placeArr[indexOfItem]} />
-          <footer>
-            <button onClick={detailPlace} className="go-list">
-              수정하기
-            </button>
-          </footer>
-        </div>
+        <Detail place={placeArr[indexOfItem]} setIsPlaceClicked={setIsPlaceClicked} />
       ) : (
         <div className="scrap-list-box">
           <span className="star-text">★</span>

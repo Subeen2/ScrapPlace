@@ -8,7 +8,7 @@ import Logo from "../logo.png";
 import { Place } from "../type";
 
 function Home() {
-  const [isShow, setIsShow] = useState<boolean>(true);
+  const [isScrapPlaceShow, setIsScrapPlaceShow] = useState<boolean>(true);
   const placeItems = localStorage.getItem("place");
   const [placeArr, setPlaceArr] = useState<Place[]>([]);
 
@@ -16,17 +16,17 @@ function Home() {
     if (typeof placeItems === "string") {
       setPlaceArr(JSON.parse(placeItems));
     }
-  }, [isShow]);
+  }, [isScrapPlaceShow]);
 
   const scrapListClicked = () => {
     if (typeof placeItems === "string") {
       setPlaceArr(JSON.parse(placeItems));
     }
-    setIsShow(true);
+    setIsScrapPlaceShow(true);
   };
 
   const addPlaceClicked = () => {
-    setIsShow(false);
+    setIsScrapPlaceShow(false);
   };
 
   const deletePlace = (e: any) => {
@@ -59,10 +59,10 @@ function Home() {
         <ScrapPlace
           placeArr={placeArr}
           deletePlace={deletePlace}
-          isShow={isShow}
-          setIsShow={setIsShow}
+          isShow={isScrapPlaceShow}
+          setIsShow={setIsScrapPlaceShow}
         />
-        <AddPlace placeArr={placeArr} isShow={isShow} setIsShow={setIsShow} />
+        <AddPlace placeArr={placeArr} isShow={isScrapPlaceShow} setIsShow={setIsScrapPlaceShow} />
       </main>
       <footer className="footer">
         <p>made by SB</p>

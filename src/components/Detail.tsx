@@ -5,9 +5,10 @@ import { Place } from "../type";
 
 interface Props {
   place: Place;
+  setIsPlaceClicked: (e: boolean) => void;
 }
 
-function Detail({ place }: Props) {
+function Detail({ place, setIsPlaceClicked }: Props) {
   const kakao = (window as any).kakao;
   // const [keyword, setKeyword] = useState<string>();
   // const [isAddedMapShow, setIsAddedMapShow] = useState<string>('hidden');
@@ -350,6 +351,9 @@ function Detail({ place }: Props) {
           마우스 왼쪽 클릭 → 원하는 장소에 옮겨 재클릭 → 오른쪽 마우스 클릭 : 장소 사이의 거리,
           도보/자전거 이동시 소요 시간을 보실 수 있습니다 . !
         </div>
+        <button className="go-list" onClick={() => setIsPlaceClicked(false)}>
+          목록으로
+        </button>
       </div>
       {/* <div>
       <span>근처</span>

@@ -2,7 +2,7 @@
   display: none;
 }
 
-h2 {
+.h2 {
   width: 800px;
   margin: 0 auto 100px auto;
 }
@@ -33,7 +33,7 @@ h2 {
 
   .content {
     position: absolute;
-    width: 400px;
+    width: 350px;
     height: 40px;
     left: 300px;
     background: aliceblue;
@@ -42,6 +42,7 @@ h2 {
     padding: 12px 12.8px;
     text-align: center;
     margin-left: 100px;
+    font-size: 15px;
   }
 
   .content:after {
@@ -64,7 +65,7 @@ h2 {
     border-radius: 10px;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
     transition: 0.25s;
-    margin: 350px 40px 50px 0;
+    margin: 350px 40px 40px 0;
     font-weight: 600;
   }
 

@@ -33,6 +33,27 @@
     color: #a0d1f7;
     font-size: small;
   }
+
+  .go-list {
+    width: 100px;
+    height: 50px;
+    background-color: #ffdfe9;
+    position: relative;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    transition: 0.25s;
+    font-weight: 600;
+    left: calc(50% - 50px / 2);
+    margin-top: 40px;
+  }
+
+  .go-list:hover {
+    letter-spacing: 1px;
+    transform: scale(1.1);
+    cursor: pointer;
+  }
 }
 
 // .show-map {

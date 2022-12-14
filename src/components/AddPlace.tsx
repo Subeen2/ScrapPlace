@@ -65,7 +65,7 @@ function AddPlace({ setIsShow, isShow, placeArr }: Props): ReactElement {
 
   return (
     <div className={className}>
-      <h2>장소 추가하기</h2>
+      <h2 className="h2">장소 추가하기</h2>
       <div className="add-place-box">
         <form className="set-block">
           <label htmlFor="placename">* 가게 이름 :</label>
@@ -89,6 +89,9 @@ function AddPlace({ setIsShow, isShow, placeArr }: Props): ReactElement {
         <div className="content">가게 이름과 주소는 필수 입력 값 입니다 !</div>
         <button onClick={(e) => setLocalStorage(e)} type="submit" className="add-button">
           등록
+        </button>
+        <button onClick={() => setIsShow(true)} type="submit" className="add-button">
+          취소
         </button>
       </div>
     </div>
